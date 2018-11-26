@@ -1,5 +1,6 @@
 package com.open.unittestingdemo.controller;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,8 +20,8 @@ public class RestFulContollerTest {
 
 
     @Test
-    public void hello() {
-        ResponseEntity<String> response = restTemplate.exchange(url + "/helloRest?name=wcp" ,
+    public void getUserRest() {
+        ResponseEntity<String> response = restTemplate.exchange(url + "/getUserRest" ,
                 HttpMethod.GET,
                 new HttpEntity(null),
                 String.class);
